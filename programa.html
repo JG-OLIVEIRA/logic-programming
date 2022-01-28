@@ -2,12 +2,25 @@
 <meta charset="UTF-8" />
 
 <script>
+  function pulaLinha() {
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
   var ano = 2021;
+
   var idadeFlavio = 20;
   var idadeFabiana = 8;
+
   var media = (idadeFabiana + idadeFlavio) / 2;
 
-  document.write("Flávio nasceu em " + (ano - idadeFlavio) + "<br>");
-  document.write("Fabiana nasceu em " + (ano - idadeFabiana) + "<br>");
-  document.write("A média das idades é " + media + "<br>");
+  mostra("Flávio nasceu em " + (ano - idadeFlavio));
+
+  mostra("Fabiana nasceu em " + (ano - idadeFabiana));
+
+  mostra("A média das idades é " + media);
 </script>
