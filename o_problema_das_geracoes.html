@@ -9,8 +9,6 @@
 </p>
 
 <script>
-  var anoAtual = 2022;
-
   function pulaLinha() {
     document.write("<br>");
   }
@@ -19,5 +17,9 @@
     document.write(frase);
   }
 
-  mostra("Gerações que se passaram: " + (2022 - 1500) / 28);
+  var anoAtual = 2022;
+  var idadeMediaQuandoTemFilhos = 28;
+  var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+
+  mostra("Gerações que se passaram: " + quantidadeDeGeracoes);
 </script>
