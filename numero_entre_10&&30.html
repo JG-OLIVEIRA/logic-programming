@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var n = 30;
+
+  while (n != 40) {
+    if (n != 33 && n != 37) {
+      mostra(n);
+    }
+    n = n + 1;
+  }
+</script>
