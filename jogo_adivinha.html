@@ -12,12 +12,22 @@
     pulaLinha();
   }
 
-  var numeroPensado = Math.round(Math.random() * 10);
+  function sorteia(n) {
+    return Math.round(Math.random() * n);
+  }
+
   var chute = parseInt(prompt("Digite seu chute!"));
+  var numeroPensado = sorteia(10);
 
   if (numeroPensado == chute) {
-    document.write("Você acertou!");
+    mostra("Você acertou!");
   } else {
-    document.write("Você errou! O número pensado foi " + numeroPensado);
+    mostra("Você errou! O número pensado foi " + numeroPensado);
+  }
+
+  if (numeroPensado > chute) {
+    mostra("O número pensado foi maior do que o número que você chutou");
+  } else {
+    mostra("O número pensado foi menor do que o número que você chutou");
   }
 </script>
