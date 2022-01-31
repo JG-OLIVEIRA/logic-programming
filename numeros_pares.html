@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+
+<script>
+  function pulaLinha() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+
+  function mostra(frase) {
+    document.write(frase);
+    pulaLinha();
+  }
+
+  var n = 1;
+
+  while (n <= 100) {
+    if (n % 2 == 0) {
+      mostra(n);
+    }
+
+    n = n + 1;
+  }
+
+  mostra("FIM!");
+</script>
