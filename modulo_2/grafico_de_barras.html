@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<canvas width="600" height="400"></canvas>
+
+<script>
+  function desenhaRetangulo(x, y, largura, altura, cor) {
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, largura, altura);
+
+    pincel.strokeStyle = "black";
+    pincel.strokeRect(x, y, largura, altura);
+  }
+
+  function desenhaTexto(x, y, texto) {
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+
+    pincel.font = "15px Georgia";
+    pincel.fillStyle = "black";
+    pincel.fillText(texto, x, y);
+  }
+
+  var serie2015 = [50, 25, 20, 5];
+  var serie2016 = [65, 20, 13, 2];
+
+  var cores = ["blue", "green", "yellow", "red"];
+
+  function desenhaBarra(x, y, serie, cores, texto) {
+    desenhaTexto(x + 25, 25, texto);
+
+    var initialValue = 50;
+
+    for (var i = 0; i < serie.length; i++) {
+      desenhaRetangulo(x, initialValue, 80, serie[i], cores[i]);
+      initialValue = initialValue + serie[i];
+    }
+
+    // aqui precisamos desenhar vários retângulos!
+  }
+
+  desenhaBarra(50, 50, serie2015, cores, "2015");
+  desenhaBarra(150, 50, serie2016, cores, "2016");
+
+  // aqui vem mais
+</script>
