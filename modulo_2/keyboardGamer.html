@@ -42,16 +42,16 @@
   setInterval(atualizaTela, 20);
 
   function leDoTeclado(evento) {
-    if (evento.keyCode === 40) {
+    if (evento.keyCode === baixo) {
       y = y + taxa;
     }
-    if (evento.keyCode === 38) {
+    if (evento.keyCode === esquerda) {
       x = x - taxa;
     }
-    if (evento.keyCode === 39) {
+    if (evento.keyCode === direita) {
       x = x + taxa;
     }
-    if (evento.keyCode === 37) {
+    if (evento.keyCode === cima) {
       x = x - taxa;
     }
   }
