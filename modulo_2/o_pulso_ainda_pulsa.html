@@ -23,8 +23,10 @@
     limpaTela();
     desenhaCirculo(300, 200, raio, "blue");
 
-    if (x <= 30) {
-      x++;
+    if (raio < 30 && raio != 20) {
+      raio++;
+    } else {
+      raio--;
     }
   }
 
